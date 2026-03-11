@@ -38,6 +38,9 @@ app.get('/api/health', (req, res) => {
     env:    process.env.NODE_ENV,
     time:   new Date().toISOString(),
   })
+  app.get('/', (req, res) => {
+  res.status(200).json({ status: 'ok', message: 'Canchas5 API corriendo 🚀' })
+})
 })
 
 // ─── Rutas ────────────────────────────────────────────────────────────────────
